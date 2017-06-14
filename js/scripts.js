@@ -58,23 +58,9 @@ function resetPlayers() {
 
 // user-interface logic goes here
 $(document).ready(function() {
-  var Player1Name;
-  var Player2Name;
-  var number;
-  var round;
-  var whoseTurn;
-  var gameOver;
-  var totalScore;
+  var Player1Name, Player2Name, number, round, whoseTurn, gameOver, totalScore, Player1, Player2, newPlayers, mark, first, wins, box00, box01, box02, box10, box11, box12, box20, box21, box22;
   var newGame = new Game([], 0, Player1, false, 0);
-  var Player1;
-  var Player2;
-  var newPlayers = [];
-  var mark;
-  var first;
-  var wins;
-  var box00;
-  // var playerName;
-  // var newPlayer;
+
   $("button#players").click(function(event) {
     event.preventDefault();
     Player1Name = $("input#player-1-name").val();
