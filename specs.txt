@@ -1,9 +1,9 @@
 Box Specs
-A box should know its coordinates.
+√ A box should know its coordinates.
 
-A box should know whether it's empty or has a mark.
+√ A box should know whether it's empty or has a mark.
 
-If marked, a box should know whether it has an X or O.
+√ If marked, a box should know whether it has an X or O.
 
 
 Board Specs
@@ -13,7 +13,7 @@ A board should be able to tell if there are three boxes in a row with Xs or Os.
 
 
 Player Specs
-A player should know its mark (X or O).
+√ A player should know its mark (X or O).
 
 (Optional) A player should be able to choose who goes first.
 
