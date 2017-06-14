@@ -9,20 +9,19 @@ function Board(idx, fullrow) {
   this.fullrow = fullrow; // Boolean
 };
 
-function Player(playerName, playerNum, mark, first, wins) {
+function Player(playerName, mark, first, wins) {
   this.playerName = playerName;
-  this.playerNum = playerNum;
-  this.mark = mark;
-  this.first = first;
-  this.wins = wins;
+  this.mark = mark;  // "X" or "O"
+  this.first = first;  // Boolean - true or false
+  this.wins = wins;  // number
 };
 
-function Game(number, players, round, whoseTurn, gameOver, totalScore) {
+function Game(round, whoseTurn, gameOver, totalScore) {
   // this.number = number;  // global game number in sequence of games
   this.players = [];  // 2-item array with each player's name
-  this.round = round;  // automatically incremented after both players play
-  this.whoseTurn = whoseTurn;  // game keeping track of whose turn it is
-  this.gameOver = gameOver;  // Boolean - yes or no
+  this.round = round;  // number; automatically incremented after both players play
+  this.whoseTurn = whoseTurn;  // Player1 or Player2; game keeping track of whose turn it is
+  this.gameOver = gameOver;  // Boolean - true or false
   this.totalScore = totalScore;  // numeric
 };
 
@@ -61,14 +60,33 @@ function resetPlayers() {
 $(document).ready(function() {
   var Player1Name;
   var Player2Name;
+  var number;
+  var round;
+  var whoseTurn;
+  var gameOver;
+  var totalScore;
+  var newGame = new Game([], 0, Player1, false, 0);
+  var Player1;
+  var Player2;
+  var newPlayers = [];
+  var mark;
+  var first;
+  var wins;
   // var playerName;
   // var newPlayer;
   $("button#players").click(function(event) {
     event.preventDefault();
     Player1Name = $("input#player-1-name").val();
     Player2Name = $("input#player-2-name").val();
-    console.log(Player1Name);
-    console.log(Player2Name);
+      // console.log(Player1Name);
+      // console.log(Player2Name);
+    Player1 = new Player(Player1Name, "X", true, 0);
+    Player2 = new Player(Player2Name, "O", false, 0);
+      // console.log(Player1);
+      // console.log(Player2);
+      // console.log(newPlayers);
+    newGame.players.push(Player1, Player2);
+      // console.log(newGame.players);
     resetPlayers();
   });
 
