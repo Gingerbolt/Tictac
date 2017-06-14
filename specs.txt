@@ -25,7 +25,7 @@ A player should be able to tally the number of its wins.
 
 
 Game Specs
-A game should create 2 players and a board.
+A game should create 2 players and reset the board.
 
 A game should allow the players to choose who goes first, X or O.
 
