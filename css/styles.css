@@ -8,6 +8,13 @@ td {
   border: 1px solid lightgray;
 }
 
+input {
+  width: inherit;
+  height: inherit;
+  font-size: 48px;
+  text-align: center;
+}
+
 .play-button {
   text-align: center;
   margin-top: 40px;
