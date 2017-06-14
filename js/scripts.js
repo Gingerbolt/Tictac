@@ -72,6 +72,7 @@ $(document).ready(function() {
   var mark;
   var first;
   var wins;
+  var box00;
   // var playerName;
   // var newPlayer;
   $("button#players").click(function(event) {
@@ -95,5 +96,51 @@ $(document).ready(function() {
     // onclick, create new game with game board, players, etc.
     // write text input fields prompting for players' names
     resetBoard();
+  });
+
+  $("form#form00").submit(function(event) {
+      event.preventDefault();
+      box00 = $("input#text00").val();
+      console.log(box00);
+  });
+  $("form#form01").submit(function(event) {
+      event.preventDefault();
+      box01 = $("input#text01").val();
+      console.log(box01);
+  });
+  $("form#form02").submit(function(event) {
+      event.preventDefault();
+      box02 = $("input#text02").val();
+      console.log(box02);
+  });
+  $("form#form10").submit(function(event) {
+      event.preventDefault();
+      box10 = $("input#text10").val();
+      console.log(box10);
+  });
+  $("form#form11").submit(function(event) {
+      event.preventDefault();
+      box11 = $("input#text11").val();
+      console.log(box11);
+  });
+  $("form#form12").submit(function(event) {
+      event.preventDefault();
+      box12 = $("input#text12").val();
+      console.log(box12);
+  });
+  $("form#form20").submit(function(event) {
+      event.preventDefault();
+      box20 = $("input#text20").val();
+      console.log(box20);
+  });
+  $("form#form21").submit(function(event) {
+      event.preventDefault();
+      box21 = $("input#text21").val();
+      console.log(box21);
+  });
+  $("form#form22").submit(function(event) {
+      event.preventDefault();
+      box22 = $("input#text22").val();
+      console.log(box22);
   });
 });

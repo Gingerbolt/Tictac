@@ -8,6 +8,11 @@ td {
   border: 1px solid lightgray;
 }
 
+form {
+  width: inherit;
+  height: inherit;
+}
+
 input {
   width: inherit;
   height: inherit;
