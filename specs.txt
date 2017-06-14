@@ -7,7 +7,7 @@ If marked, a box should know whether it has an X or O.
 
 
 Board Specs
-A board should create 9 boxes with the proper coordinates.
+√ A board should have 9 boxes with the proper coordinates.
 
 A board should be able to tell if there are three boxes in a row with Xs or Os.
 
@@ -15,9 +15,7 @@ A board should be able to tell if there are three boxes in a row with Xs or Os.
 Player Specs
 A player should know its mark (X or O).
 
-A player should be able to choose who goes first.
-
-A player should know if it's its turn or not.
+(Optional) A player should be able to choose who goes first.
 
 A player should know if it's won or not.
 
@@ -25,11 +23,11 @@ A player should be able to tally the number of its wins.
 
 
 Game Specs
-A new game should be created upon registering both players.
+√ A new game should be created upon registering both players.
 
-A game should create 2 players and reset the board.
+√ A game should create 2 players and reset the board.
 
-A game should allow the players to choose who goes first, X or O.
+(Optional) A game should allow the players to choose who goes first, X or O.
 
 A game should be able to move to the next turn.
 
