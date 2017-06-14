@@ -43,6 +43,14 @@ function resetPlayers() {
   $("input#player-2-name").val("");
 };
 
+function isEqual (box1, box2, box3) {
+  if ((box1 === box2) && (box2 == box3)) {
+    console.log("You win!")
+  };
+
+  // (box1 === "x" && box2 === "x" && box3 === "x") || (box1 === "o" && box2 === "o" && box3 === "o")
+};
+
   // newPlayer = new Player(playerName, mark, first, wins);
 //   var players = [];
 //   var nicole = new Player("Nicole", "X", true, 0);
@@ -86,47 +94,49 @@ $(document).ready(function() {
 
   $("form#form00").submit(function(event) {
       event.preventDefault();
-      box00 = $("input#text00").val();
+      box00 = $("input#text00").val().toLowerCase();
       console.log(box00);
   });
   $("form#form01").submit(function(event) {
       event.preventDefault();
-      box01 = $("input#text01").val();
+      box01 = $("input#text01").val().toLowerCase();
       console.log(box01);
   });
   $("form#form02").submit(function(event) {
       event.preventDefault();
-      box02 = $("input#text02").val();
+      box02 = $("input#text02").val().toLowerCase();
       console.log(box02);
   });
   $("form#form10").submit(function(event) {
       event.preventDefault();
-      box10 = $("input#text10").val();
+      box10 = $("input#text10").val().toLowerCase();
       console.log(box10);
   });
   $("form#form11").submit(function(event) {
       event.preventDefault();
-      box11 = $("input#text11").val();
+      box11 = $("input#text11").val().toLowerCase();
       console.log(box11);
   });
   $("form#form12").submit(function(event) {
       event.preventDefault();
-      box12 = $("input#text12").val();
+      box12 = $("input#text12").val().toLowerCase();
       console.log(box12);
   });
   $("form#form20").submit(function(event) {
       event.preventDefault();
-      box20 = $("input#text20").val();
+      box20 = $("input#text20").val().toLowerCase();
       console.log(box20);
   });
   $("form#form21").submit(function(event) {
       event.preventDefault();
-      box21 = $("input#text21").val();
+      box21 = $("input#text21").val().toLowerCase();
       console.log(box21);
   });
   $("form#form22").submit(function(event) {
       event.preventDefault();
-      box22 = $("input#text22").val();
+      box22 = $("input#text22").val().toLowerCase();
       console.log(box22);
   });
+
+  isEqual(box00, box01, box02);
 });
