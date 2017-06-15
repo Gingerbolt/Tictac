@@ -24,3 +24,8 @@ input {
   text-align: center;
   margin-top: 40px;
 }
+
+h2 {
+  display:none;
+  color: green
+}
