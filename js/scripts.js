@@ -45,6 +45,15 @@ function resetPlayers() {
   $("input#player-2-name").val("");
 };
 
+function convertMark (mark) {
+  if (mark === "x") {
+    var markval = 1;
+  } else if (mark === "o") {
+    var markval = 2;
+  };
+  return markval;
+};
+
 function isEqual (arg1, arg2, arg3) {
   if ((arg1 === arg2) && (arg2 == arg3)) {
     console.log("You win!")
@@ -139,5 +148,7 @@ $(document).ready(function() {
       console.log(box9);
   });
 
-  isEqual(arg1, arg2, arg3);
+  // isEqual(arg1, arg2, arg3);
+  // console.log(convertMark("x"));
+  // console.log(convertMark("o"));
 });
