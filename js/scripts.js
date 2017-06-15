@@ -1,9 +1,11 @@
 // business logic goes here
-function Box(coords, empty, mark) {
-  this.coords = coords;
+function Box(coords, empty, val) {
+  this.coords = [];
   this.empty = empty;  // will be Boolean - yes or no
-  this.mark = mark;  // will be Boolean - X or O
+  this.val = val;  // value equivalent to mark; "x" = 1, "y" = 2
 };
+
+var globalCoords = {text1: [0, 0], text2: [0, 1], text3: [0, 2], text4: [1, 0], text5: [1, 1], text6: [1, 2], text7: [2, 0], text8: [2, 1], text9: [2, 2]};
 
 function Board(idx, fullrow) {
   this.fullrow = fullrow; // Boolean
@@ -27,15 +29,15 @@ function Game(round, whoseTurn, gameOver, totalScore) {
 
 function resetBoard() {
   // reset game board and boxes to ""; create new players
-  $("input#text00").val("");
-  $("input#text01").val("");
-  $("input#text02").val("");
-  $("input#text10").val("");
-  $("input#text11").val("");
-  $("input#text12").val("");
-  $("input#text20").val("");
-  $("input#text21").val("");
-  $("input#text22").val("");
+  $("input#text1").val("");
+  $("input#text2").val("");
+  $("input#text3").val("");
+  $("input#text4").val("");
+  $("input#text5").val("");
+  $("input#text6").val("");
+  $("input#text7").val("");
+  $("input#text8").val("");
+  $("input#text9").val("");
 };
 
 function resetPlayers() {
@@ -43,8 +45,8 @@ function resetPlayers() {
   $("input#player-2-name").val("");
 };
 
-function isEqual (box1, box2, box3) {
-  if ((box1 === box2) && (box2 == box3)) {
+function isEqual (arg1, arg2, arg3) {
+  if ((arg1 === arg2) && (arg2 == arg3)) {
     console.log("You win!")
   };
 
@@ -66,7 +68,7 @@ function isEqual (box1, box2, box3) {
 
 // user-interface logic goes here
 $(document).ready(function() {
-  var Player1Name, Player2Name, number, round, whoseTurn, gameOver, totalScore, Player1, Player2, newPlayers, mark, first, wins, box00, box01, box02, box10, box11, box12, box20, box21, box22;
+  var Player1Name, Player2Name, number, round, whoseTurn, gameOver, totalScore, Player1, Player2, newPlayers, mark, first, wins, box1, box2, box3, box4, box5, box6, box7, box8, box9, arg1, arg2, arg3;
   var newGame = new Game([], 0, Player1, false, 0);
 
   $("button#players").click(function(event) {
@@ -92,51 +94,50 @@ $(document).ready(function() {
     resetBoard();
   });
 
-  $("form#form00").submit(function(event) {
+  $("form#form1").submit(function(event) {
       event.preventDefault();
-      box00 = $("input#text00").val().toLowerCase();
-      console.log(box00);
+      box1 = $("input#text1").val().toLowerCase();
+      console.log(box1);
   });
-  $("form#form01").submit(function(event) {
+  $("form#form2").submit(function(event) {
       event.preventDefault();
-      box01 = $("input#text01").val().toLowerCase();
-      console.log(box01);
+      box2 = $("input#text2").val().toLowerCase();
+      console.log(box2);
   });
-  $("form#form02").submit(function(event) {
+  $("form#form3").submit(function(event) {
       event.preventDefault();
-      box02 = $("input#text02").val().toLowerCase();
-      console.log(box02);
+      box3 = $("input#text3").val().toLowerCase();
+      console.log(box3);
   });
-  $("form#form10").submit(function(event) {
+  $("form#form4").submit(function(event) {
       event.preventDefault();
-      box10 = $("input#text10").val().toLowerCase();
-      console.log(box10);
+      console.log(box4);
   });
-  $("form#form11").submit(function(event) {
+  $("form#form5").submit(function(event) {
       event.preventDefault();
-      box11 = $("input#text11").val().toLowerCase();
-      console.log(box11);
+      box5 = $("input#text5").val().toLowerCase();
+      console.log(box5);
   });
-  $("form#form12").submit(function(event) {
+  $("form#form6").submit(function(event) {
       event.preventDefault();
-      box12 = $("input#text12").val().toLowerCase();
-      console.log(box12);
+      box6 = $("input#text6").val().toLowerCase();
+      console.log(box6);
   });
-  $("form#form20").submit(function(event) {
+  $("form#form7").submit(function(event) {
       event.preventDefault();
-      box20 = $("input#text20").val().toLowerCase();
-      console.log(box20);
+      box7 = $("input#text7").val().toLowerCase();
+      console.log(box7);
   });
-  $("form#form21").submit(function(event) {
+  $("form#form8").submit(function(event) {
       event.preventDefault();
-      box21 = $("input#text21").val().toLowerCase();
-      console.log(box21);
+      box8 = $("input#text8").val().toLowerCase();
+      console.log(box8);
   });
-  $("form#form22").submit(function(event) {
+  $("form#form9").submit(function(event) {
       event.preventDefault();
-      box22 = $("input#text22").val().toLowerCase();
-      console.log(box22);
+      box9 = $("input#text9").val().toLowerCase();
+      console.log(box9);
   });
 
-  isEqual(box00, box01, box02);
+  isEqual(arg1, arg2, arg3);
 });
